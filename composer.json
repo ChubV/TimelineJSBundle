@@ -3,12 +3,12 @@
     "type": "symfony-bundle",
     "description": "TimelineJS bundle for Symfony2",
     "keywords": ["timeline js bundle"],
-    "homepage": "http://github.com/chub/",
+    "homepage": "https://github.com/ChubV/TimelineJSBundle",
     "authors": [
         {
             "name": "Vladimir Chub",
             "email": "v@chub.com.ua",
-            "homepage": "http://github.com/chub/"
+            "homepage": "https://github.com/ChubV"
         }
     ],
     "require": {
