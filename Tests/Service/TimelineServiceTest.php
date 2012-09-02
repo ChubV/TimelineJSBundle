@@ -52,7 +52,7 @@ class TimelineServiceTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function testBadEntity()
 	{
-		$this->setExpectedException('Exception');
+		$this->setExpectedException('InvalidArgumentException');
 
 		$ts = $this->get('timelinejs');
 
