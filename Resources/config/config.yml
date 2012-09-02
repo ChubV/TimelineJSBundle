@@ -1,0 +1,8 @@
+parameters:
+  timelinejs.web.path: "%kernel.root_dir%/../web"
+  timelinejs.manager.class: ChubProduction\TimelineJSBundle\Service\Timelinejs
+    
+services:
+  timelinejs:
+    class: %timelinejs.manager.class%
+    arguments: [%timelinejs.web.path%]

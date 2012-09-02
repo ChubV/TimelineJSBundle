@@ -1,0 +1,7 @@
+framework:
+    secret:          123
+    router:
+        resource: "%kernel.root_dir%/routing.yml"
+        strict_requirements: %kernel.debug%
+    templating:      { engines: ['php'] } #assets_version: SomeVersionScheme
+    test: ~

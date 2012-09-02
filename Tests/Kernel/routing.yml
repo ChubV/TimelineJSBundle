@@ -1,0 +1,4 @@
+TimelineJSBundle:
+    resource: "@TimelineJSBundle/Controller/"
+    type:     annotation
+    prefix:   /

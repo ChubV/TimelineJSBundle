@@ -1,0 +1,7 @@
+{% macro head() %}
+    <script type="text/javascript" src="{{ asset('bundles/timelinejs/js/storyjs-embed.js') }}"></script>
+{% endmacro %}
+
+{% macro show(tl, opts) %}
+    {{ tl.script(opts | merge({'js': asset('bundles/timelinejs/js/timeline-min.js'),'css':  asset('bundles/timelinejs/css/timeline.css')})) |raw }}
+{% endmacro %}

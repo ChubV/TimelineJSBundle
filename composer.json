@@ -1,0 +1,24 @@
+{
+    "name": "chub/timelinejs-bundle",
+    "type": "symfony-bundle",
+    "description": "TimelineJS bundle for Symfony2",
+    "keywords": ["timeline js bundle"],
+    "homepage": "http://github.com/chub/",
+    "authors": [
+        {
+            "name": "Vladimir Chub",
+            "email": "v@chub.com.ua",
+            "homepage": "http://github.com/chub/"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "symfony/framework-bundle": "2.1.*",
+        "symfony/yaml": "2.1.*"
+    },
+    "autoload": {
+        "psr-0": { "ChubProduction\\TimelineJSBundle": "" }
+    },
+    "minimum-stability": "dev",
+    "target-dir": "ChubProduction/TimelineJSBundle"
+}
