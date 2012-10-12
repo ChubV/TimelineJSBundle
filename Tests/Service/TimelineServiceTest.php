@@ -3,7 +3,6 @@ namespace ChubProduction\TimelineJSBundle\Tests\Service;
 
 use ChubProduction\TimelineJSBundle\Tests\Service\Entity\GoodEntity;
 use ChubProduction\TimelineJSBundle\Tests\Service\Entity\BadEntity;
-use ChubProduction\TimelineJSBundle\Exception\TimelineInvalidInputException;
 
 /**
  * Timeline service test
@@ -53,14 +52,14 @@ class TimelineServiceTest extends \PHPUnit_Framework_TestCase
 	public function testBadEntity()
 	{
 		$fail = true;
-		
+
 		try {
 			$ts = $this->get('timelinejs');
-			$timeline = $ts->createTimeline('myTimeline', [new BadEntity(), new GoodEntity()]);
+			$ts->createTimeline('myTimeline', [new BadEntity(), new GoodEntity()]);
 		} catch (\Exception $e) {
 			$fail = false;
 		}
-		
+
 		$this->assertFalse($fail, 'No exception on bad entity');
 	}
 
@@ -72,8 +71,7 @@ class TimelineServiceTest extends \PHPUnit_Framework_TestCase
 		$this->setExpectedException('ChubProduction\TimelineJSBundle\Exception\TimelineNoItemsException');
 
 		$ts = $this->get('timelinejs');
-
-		$timeline = $ts->createTimeline('myTimeline', []);
+		$ts->createTimeline('myTimeline', []);
 	}
 
 	/**
@@ -84,8 +82,7 @@ class TimelineServiceTest extends \PHPUnit_Framework_TestCase
 		$this->setExpectedException('ChubProduction\TimelineJSBundle\Exception\TimelineBadArgumentsException');
 
 		$ts = $this->get('timelinejs');
-
-		$timeline = $ts->createTimeline('myTimeline', $this->createTestEntities(), 'ololo');
+		$ts->createTimeline('myTimeline', $this->createTestEntities(), 'ololo');
 	}
 
 	/**
