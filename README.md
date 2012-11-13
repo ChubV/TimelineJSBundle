@@ -5,6 +5,8 @@ TimelineJS Symfony2 bundle. Provides easy integration of [TimelineJS][tlhp].
 
 [![Build Status](https://secure.travis-ci.org/ChubV/TimelineJSBundle.png)](http://travis-ci.org/ChubV/TimelineJSBundle)
 
+[![knp](http://knpbundles.com/ChubV/TimelineJSBundle/badge-short)](http://knpbundles.com/ChubV/TimelineJSBundle)
+
 About TimelineJS
 ----------------
 
