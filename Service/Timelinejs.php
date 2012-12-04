@@ -71,7 +71,7 @@ class Timelinejs implements TimelinejsInterface
 	 */
 	protected function toJson($items, $head)
 	{
-		$res = [];
+		$res = array();
 
 		$res['timeline'] = $this->toArray($items[$head]);
 		$res['timeline']['type'] = 'default';
@@ -79,7 +79,7 @@ class Timelinejs implements TimelinejsInterface
 
 		foreach ($items as $item) {
 			$type = 'date';
-			if (in_array($item->getType(), ['date', 'era'])) {
+			if (in_array($item->getType(), array('date', 'era'))) {
 				$type = $item->getType();
 			}
 
@@ -98,8 +98,8 @@ class Timelinejs implements TimelinejsInterface
 	 */
 	protected function toArray(TimelineEntityInterface $item)
 	{
-		$res = [];
-		foreach (['startDate', 'headline', 'text', 'endDate', 'tag'] as $key) {
+		$res = array();
+		foreach (array('startDate', 'headline', 'text', 'endDate', 'tag') as $key) {
 			$getter = 'get' . ucfirst($key);
 			$val = $item->$getter();
 			if ($val != null) {
@@ -113,7 +113,7 @@ class Timelinejs implements TimelinejsInterface
 
 		$asset = $item->getAsset();
 
-		foreach (['media', 'thumbnail', 'credit', 'caption'] as $key) {
+		foreach ( array('media', 'thumbnail', 'credit', 'caption') as $key) {
 			if (isset($asset[$key]) && $asset[$key] != null) {
 				$val = $asset[$key];
 
