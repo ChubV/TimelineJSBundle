@@ -13,12 +13,17 @@
     ],
     "require": {
         "php": ">=5.4",
-        "symfony/framework-bundle": "2.1.*",
-        "symfony/yaml": "2.1.*"
+        "symfony/framework-bundle": "2.2.*",
+        "symfony/yaml": "2.2.*"
     },
     "autoload": {
         "psr-0": { "ChubProduction\\TimelineJSBundle": "" }
     },
     "minimum-stability": "dev",
-    "target-dir": "ChubProduction/TimelineJSBundle"
+    "target-dir": "ChubProduction/TimelineJSBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.2.x-dev"
+        }
+    }
 }
