@@ -55,7 +55,7 @@ class TimelineServiceTest extends \PHPUnit_Framework_TestCase
 
 		try {
 			$ts = $this->get('timelinejs');
-			$ts->createTimeline('myTimeline', [new BadEntity(), new GoodEntity()]);
+			$ts->createTimeline('myTimeline', array(new BadEntity(), new GoodEntity()));
 		} catch (\Exception $e) {
 			$fail = false;
 		}
@@ -71,7 +71,7 @@ class TimelineServiceTest extends \PHPUnit_Framework_TestCase
 		$this->setExpectedException('ChubProduction\TimelineJSBundle\Exception\TimelineNoItemsException');
 
 		$ts = $this->get('timelinejs');
-		$ts->createTimeline('myTimeline', []);
+		$ts->createTimeline('myTimeline', array());
 	}
 
 	/**
@@ -92,7 +92,7 @@ class TimelineServiceTest extends \PHPUnit_Framework_TestCase
 	 */
 	private function createTestEntities()
 	{
-		$te = [new GoodEntity(), new GoodEntity()];
+		$te = array(new GoodEntity(), new GoodEntity());
 
 		return $te;
 	}
