@@ -16,7 +16,7 @@ class GoodEntity implements TimelineEntityInterface
 	}
 	public function getAsset()
 	{
-		return ['ololo' => 'trololo'];
+		return array('ololo' => 'trololo');
 	}
 	public function getStartDate()
 	{
