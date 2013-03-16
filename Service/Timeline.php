@@ -35,12 +35,12 @@ class Timeline
 	 */
 	public function getScript($arguments = array())
 	{
-		$args = ['width' => '100%', 'height' => 600, 'source' => $this->fileName];
+		$args = array('width' => '100%', 'height' => 600, 'source' => $this->fileName);
 
-		foreach (['width', 'height', 'embed_id',
+		foreach (array('width', 'height', 'embed_id',
 						'start_at_end', 'start_at_slide',
 						'start_zoom_adjust', 'hash_bookmark',
-						'font', 'debug', 'lang', 'maptype', 'css', 'js'] as $arg) {
+						'font', 'debug', 'lang', 'maptype', 'css', 'js') as $arg) {
 			if (isset($arguments[$arg])) {
 				$args[$arg] = $arguments[$arg];
 			}
