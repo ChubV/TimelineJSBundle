@@ -15,6 +15,6 @@ class TestProvider implements TimelineJSProviderInterface
 	 */
 	public function getEntities()
 	{
-		return [new GoodEntity(), new GoodEntity()];
+		return array(new GoodEntity(), new GoodEntity());
 	}
 }
